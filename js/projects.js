@@ -6,9 +6,9 @@ let projects = [
         url: "https://github.com/brunogeek9/be-the-hero",
         languages: "expo, react-native, node-js and axios.",
         print: {
-            file: "/img/tela1.png",
-            h: "400px",
-            w: "700px"
+            file: "/images/tela1.png",
+            h: "470px",
+            w: "900px"
         },
         description: "project created within omiweak 11 with the aim of training knowledge while connecting people and ONGs in my region."
     },
@@ -17,9 +17,9 @@ let projects = [
         languages: "PHP with cakephp",
         url: "https://github.com/brunogeek9/task_manager",
         print: {
-            file: "",
-            h: "600px",
-            w: "200px"
+            file: "/images/tela2.png",
+            h: "470px",
+            w: "900px"
         },
         description: "Task manager web app implemented with cakephp + mysql + bootstrap 4. "
     },
@@ -28,7 +28,7 @@ let projects = [
         url: "https://github.com/brunogeek9/weather-bot",
         languages: "JS",
         print: {
-            file: "/img/tela3.jpg",
+            file: "/images/tela3.jpg",
             h: "500px",
             w: "300px"
         },
@@ -39,20 +39,20 @@ let projects = [
         url: "https://github.com/brunojamelli/GitfootOlheiro",
         languages: "Firebase, google maps api and android native api.",
         print: {
-            file: "/img/tela4.jpeg",
+            file: "/images/tela4.png",
             h: "500px",
             w: "300px"
         },
-        description: "desc"
+        description: "Application to help football players and scouts meet."
     },
+
 ]
 console.log(projects);
 const addInDoom = async() => {
-    const header = `<h2 class="mb-5">Personal Projects</h2>`;
+    const header = `<h2 class="mb-5" align="center">Personal Projects</h2>`;
     const reposTemplate = projects.map(({ name, description, url, languages, print }) =>
         `
-
-                <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
+                <div class="resume-item d-flex flex-column  col-xs-1" align="center">
                     <div class="resume-content">
                         <h3 class="mb-0">${name}</h3>
                         <div class="subheading mb-3"> 
@@ -65,12 +65,12 @@ const addInDoom = async() => {
                         </a>
                     </div>
                 </div>
-                <hr>
-            </div>
-        
+                <div class="border-top my-3"></div>
+
         `).join('')
     console.log(reposTemplate);
-    education.innerHTML += reposTemplate
+    const content = header + reposTemplate;
+    education.innerHTML += content;
 }
 
 addInDoom();
