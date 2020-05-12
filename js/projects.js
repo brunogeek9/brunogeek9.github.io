@@ -1,4 +1,12 @@
 const education = document.querySelector('#personal-projects');
+let MOBILE_DIM = {
+    w: "250px",
+    h: "400px"
+}
+let WEB_DIM = {
+    w: "700px",
+    h: "400px"
+}
 let projects = [
 
     {
@@ -7,8 +15,8 @@ let projects = [
         languages: "expo, react-native, node-js and axios.",
         print: {
             file: "/images/tela1.png",
-            h: "470px",
-            w: "900px"
+            h: WEB_DIM.h,
+            w: WEB_DIM.w
         },
         description: "project created within omiweak 11 with the aim of training knowledge while connecting people and ONGs in my region."
     },
@@ -18,8 +26,8 @@ let projects = [
         url: "https://github.com/brunogeek9/task_manager",
         print: {
             file: "/images/tela2.png",
-            h: "470px",
-            w: "900px"
+            h: WEB_DIM.h,
+            w: WEB_DIM.w
         },
         description: "Task manager web app implemented with cakephp + mysql + bootstrap 4. "
     },
@@ -29,8 +37,8 @@ let projects = [
         languages: "JS",
         print: {
             file: "/images/tela3.jpg",
-            h: "500px",
-            w: "300px"
+            h: MOBILE_DIM.h,
+            w: MOBILE_DIM.w
         },
         description: "bot for the telegram implemented in nodejs with the node-telegram-bot-api library and the openweathermap API."
     },
@@ -40,8 +48,8 @@ let projects = [
         languages: "Firebase, google maps api and android native api.",
         print: {
             file: "/images/tela4.png",
-            h: "500px",
-            w: "300px"
+            h: MOBILE_DIM.h,
+            w: MOBILE_DIM.w
         },
         description: "Application to help football players and scouts meet."
     },
@@ -52,7 +60,7 @@ const addInDoom = async() => {
     const header = `<h2 class="mb-5" align="center">Personal Projects</h2>`;
     const reposTemplate = projects.map(({ name, description, url, languages, print }) =>
         `
-                <div class="resume-item d-flex flex-column  col-xs-1" align="center">
+                <div class="resume-section p-3 p-lg-5 d-flex align-items-center">
                     <div class="resume-content">
                         <h3 class="mb-0">${name}</h3>
                         <div class="subheading mb-3"> 
@@ -61,7 +69,7 @@ const addInDoom = async() => {
                             </span>
                         </div>
                         <a href="${url}" target="_black">
-                        <img src="${print.file}" alt="..." style="width: ${print.w}; height: ${print.h}">
+                        <img src="${print.file}" class="img-fluid" width= ${print.w} height= ${print.h}>
                         </a>
                     </div>
                 </div>
