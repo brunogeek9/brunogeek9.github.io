@@ -4,9 +4,10 @@ let MOBILE_DIM = {
     h: "400px"
 }
 let WEB_DIM = {
-    w: "700px",
-    h: "400px"
+    w: "600px",
+    h: "300px"
 }
+let txt = "follow the project on my github"
 let projects = [
 
     {
@@ -18,7 +19,7 @@ let projects = [
             h: WEB_DIM.h,
             w: WEB_DIM.w
         },
-        description: "project created within omiweak 11 with the aim of training knowledge while connecting people and ONGs in my region."
+        description: "Created within omiweak 11 with the aim of training knowledge while connecting people and ONGs."
     },
     {
         name: "task manager",
@@ -29,7 +30,7 @@ let projects = [
             h: WEB_DIM.h,
             w: WEB_DIM.w
         },
-        description: "Task manager web app implemented with cakephp + mysql + bootstrap 4. "
+        description: "Task manager web app implemented with cakephp."
     },
     {
         name: "Hackernews",
@@ -51,7 +52,7 @@ let projects = [
             h: MOBILE_DIM.h,
             w: MOBILE_DIM.w
         },
-        description: "bot for the telegram implemented in nodejs with the node-telegram-bot-api library and the openweathermap API."
+        description: "bot for telegram implemented js and openweathermap API."
     },
     {
         name: "Gitfoot",
@@ -82,9 +83,14 @@ const addInDoom = async() => {
                         <a href="${url}" target="_black">
                         <img src="${print.file}" class="img-fluid" width= ${print.w} height= ${print.h}>
                         </a>
+                        <div class="subheading mb-3"> 
+                            <span >
+                                <a class="text-secondary" href="${url}" target="_black">${txt}</a> 
+                            </span>
+                        </div>
                     </div>
                 </div>
-                <div class="border-top my-3"></div>
+                <div class="border-top "></div>
 
         `).join('')
     console.log(reposTemplate);
