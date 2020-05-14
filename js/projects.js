@@ -32,6 +32,17 @@ let projects = [
         description: "Task manager web app implemented with cakephp + mysql + bootstrap 4. "
     },
     {
+        name: "Hackernews",
+        languages: "",
+        url: "https://github.com/brunogeek9/hackernews-clone",
+        print: {
+            file: "/images/tela5.png",
+            h: WEB_DIM.h,
+            w: WEB_DIM.w
+        },
+        description: "Simple clone of hackernews implemented for learning purposes."
+    },
+    {
         name: "weather bot",
         url: "https://github.com/brunogeek9/weather-bot",
         languages: "JS",
@@ -57,7 +68,7 @@ let projects = [
 ]
 console.log(projects);
 const addInDoom = async() => {
-    const header = `<h2 class="mb-5" align="center">Personal Projects</h2>`;
+    const header = `<h2 class="mb-5" align="center">Projects</h2>`;
     const reposTemplate = projects.map(({ name, description, url, languages, print }) =>
         `
                 <div class="resume-section p-3 p-lg-5 d-flex align-items-center">
