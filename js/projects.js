@@ -69,10 +69,10 @@ let projects = [
 ]
 console.log(projects);
 const addInDoom = async() => {
-    const header = `<h2 class="mb-5" align="center">Projects</h2>`;
+    const header = `<h2 class="mb-5">Projects</h2>`;
     const reposTemplate = projects.map(({ name, description, url, languages, print }) =>
         `
-                <div class="resume-section p-3 p-lg-5 d-flex align-items-center">
+                <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
                     <div class="resume-content">
                         <h3 class="mb-0">${name}</h3>
                         <div class="subheading mb-3"> 
